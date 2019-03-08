@@ -63,19 +63,10 @@ with open(output_path, 'w', newline='') as csvfile:
     csvwriter.writerow(["Total Months", count])
     csvwriter.writerow(["Net Total", net_total])
     csvwriter.writerow(["Average Change", avg])
-    csvwriter.writerow(["Greates Increase", maxchange])
+    csvwriter.writerow(["Greatest Increase", maxchange])
     csvwriter.writerow(["Greatest Increase Date", maxdate])
     csvwriter.writerow(["Greatest Decrease", minchange])
     csvwriter.writerow(["Greatest Decrease Date", mindate])
 
 output_path = "summary_budget.txt"
 
-file = open(output_path, 'w')
-file.write("Financial Analysis\n")
-file.write("-------------------------\n")
-file.write(f"Total Months: {count}\n")
-file.write(f"Total: ${net_total}\n")
-file.write(f"Average Change: {avg}\n")
-file.write(f"Greatest Increase in Profits: {maxdate} (${maxchange})\n")
-file.write(f"Greatest Decrease in Profits: {mindate} (${minchange})\n")
-file.write("-------------------------")
