@@ -10,8 +10,7 @@ import os
 
 count = 0            # Counter for number of months
 
-
-employee_csvpath = 'employee_data.csv'
+employee_csvpath = os.path.join('Resources', 'employee_data.csv')
 output_path = 'employee_data_new_format.csv'
 
 us_state_abbrev = {'Alabama': 'AL', 'Alaska': 'AK', 'Arizona': 'AZ', 'Arkansas': 'AR',
