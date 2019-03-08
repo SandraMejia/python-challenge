@@ -4,11 +4,8 @@
 
 # ------------------------------------------------------------------------------------
 
-
 import csv
 import os
-
-count = 0            # Counter for number of months
 
 employee_csvpath = os.path.join('Resources', 'employee_data.csv')
 output_path = 'employee_data_new_format.csv'
@@ -27,8 +24,6 @@ us_state_abbrev = {'Alabama': 'AL', 'Alaska': 'AK', 'Arizona': 'AZ', 'Arkansas':
     'Vermont': 'VT', 'Virginia': 'VA', 'Washington': 'WA', 'West Virginia': 'WV',
     'Wisconsin': 'WI', 'Wyoming': 'WY'}
 
-
-
 with open(employee_csvpath, newline='') as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
     csv_header = next(csvreader)
@@ -37,8 +32,6 @@ with open(employee_csvpath, newline='') as csvfile:
         csvwriter = csv.writer(csvfile, delimiter=',')
         csvwriter.writerow(["Emp ID","First Name","Last Name","DOB","SSN","State"])
 
-
-    
         for row in csvreader:
             name = row[1].split(" ")
             date = row[2].split("-")
