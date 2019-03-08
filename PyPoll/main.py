@@ -63,17 +63,3 @@ with open(output_path, 'w', newline='') as csvfile:
     for i in range(len(candidates)):
         csvwriter.writerow([candidates[i], percentage[i], votes[i]])
     csvwriter.writerow(["Winner", winner])
-
-
-output_path = "summary_election.txt"
-
-file = open(output_path, 'w')
-file.write("Election Results\n")
-file.write("-------------------------\n")
-file.write(f"Total Votes: {count}\n")
-file.write("-------------------------\n")
-for i in range(len(candidates)):
-    file.write(candidates[i] + ": " + str(percentage[i]) + "% (" + str(votes[i]) + ")\n")
-file.write("-------------------------\n")
-file.write(f"Winner: {winner}\n")
-file.write("-------------------------")
